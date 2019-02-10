@@ -30,6 +30,25 @@
 
 ```
 
+
+
+MyResource.groovy
+
+```groovy
+@TaskAction
+void downloadResource(){
+
+    def src = "scripts/docker-compose/tomcat7/docker-compose.yml"
+
+    def outputDir = "output"
+    def dest = outputDir +"/"+ src
+
+    this.copyFileFromInsideJarFile( src , dest )
+}
+
+```
+
+
 Building jar file.
 
 ```sh
