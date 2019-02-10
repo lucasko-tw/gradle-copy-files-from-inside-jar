@@ -1,0 +1,5 @@
+services:
+  tomcat:
+    image: 'tomcat:7'
+    ports:
+      - '8080:8080'
